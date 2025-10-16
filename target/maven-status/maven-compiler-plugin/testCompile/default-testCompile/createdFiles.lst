@@ -1,0 +1,4 @@
+com\creatorboost\auth_service\service\UserEntityTest.class
+com\creatorboost\auth_service\AuthServiceApplicationTests.class
+com\creatorboost\auth_service\service\AppUserDetailsServiceTest.class
+com\creatorboost\auth_service\service\ProfileServiceImplTest.class
