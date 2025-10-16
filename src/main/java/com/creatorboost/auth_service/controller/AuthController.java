@@ -60,10 +60,12 @@ public class AuthController {
             String jwt = jwtUtil.generateToken(userDetails, userEntity.getRole().name());
             ResponseCookie cookie = ResponseCookie.from("jwt", jwt)
                     .httpOnly(true)
+                    .secure(true)
                     .path("/")
                     .maxAge(60 * 60 * 10) // 10 hours
                     //.sameSite("Strict")
                     .sameSite("None") // For cross-site requests, ensure to use Secure flag in production
+
                     .build();
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())
