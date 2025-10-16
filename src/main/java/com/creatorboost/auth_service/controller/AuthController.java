@@ -62,8 +62,8 @@ public class AuthController {
                     .httpOnly(true)
                     .path("/")
                     .maxAge(60 * 60 * 10) // 10 hours
-                    .sameSite("Strict")
-                    //.sameSite("None") // For cross-site requests, ensure to use Secure flag in production
+                    //.sameSite("Strict")
+                    .sameSite("None") // For cross-site requests, ensure to use Secure flag in production
                     .build();
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())
