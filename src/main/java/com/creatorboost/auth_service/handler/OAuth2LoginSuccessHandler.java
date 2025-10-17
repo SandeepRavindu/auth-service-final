@@ -94,6 +94,6 @@ public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
         logger.info("JWT cookie set for: {}", email);
 
         // Redirect user to frontend
-        response.sendRedirect("https://creatorboost-frontend-users.vercel.app");
+        response.sendRedirect("https://creatorboost-frontend-admin.vercel.app");
     }
 }
